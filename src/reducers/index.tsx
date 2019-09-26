@@ -1,5 +1,6 @@
-import { ModifyAction } from '../actions';
-import { DECREMENT, INCREMENT } from '../constants';
+import { ModifyAction } from '../actions/actionCreator';
+
+import { DECREMENT, INCREMENT } from '../actions/actionTypes';
  
  
 // 处理并返回 state 

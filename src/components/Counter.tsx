@@ -14,7 +14,7 @@ export default class Counter extends React.PureComponent<Iprops> {
         const { value, onIncrement, onDecrement } = this.props;
         return (
             <p>
-                Clicked: { value } times
+                当前值为: { value } 
                 <br />
                 <br />
                 <button onClick={ onIncrement } style={{ marginRight: 20 }}> +  </button>

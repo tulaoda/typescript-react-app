@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
  
-import { decrement, increment } from '../actions';
+import { decrement, increment } from '../actions/actionCreator';
 import Counter from '../components/Counter';
 import { StoreState } from '../types';
  

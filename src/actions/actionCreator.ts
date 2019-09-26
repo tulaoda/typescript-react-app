@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT } from '../constants';
+import { DECREMENT, INCREMENT } from './actionTypes';
 
 export interface IINCREMENTAction {
     type: INCREMENT;
