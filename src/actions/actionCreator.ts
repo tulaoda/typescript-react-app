@@ -1,23 +1,12 @@
-import { DECREMENT, INCREMENT } from './actionTypes';
+import { Actions, DECREMENT, SET_INPUT_VALUE } from "./actionTypes";
 
-export interface IINCREMENTAction {
-    type: INCREMENT;
-}
- 
-export interface IDECREMENTAction {
-    type: DECREMENT;
-}
- 
-// 定义 modifyAction 类型，包含 IINCREMENTAction 和 IDECREMENTAction 接口类型
-export type ModifyAction = IINCREMENTAction | IDECREMENTAction;
- 
- 
-// 增加 state 次数的方法
-export const increment = (): IINCREMENTAction => ({
-    type: INCREMENT,
-})
- 
-// 减少 state 次数的方法
-export const decrement = (): IDECREMENTAction => ({
-    type: DECREMENT
-})
+export default {
+  decrement: (value: number): Actions => ({
+    type: DECREMENT,
+    value
+  }),
+  setInputValue: (value: number): Actions => ({
+    type: SET_INPUT_VALUE,
+    value
+  })
+};

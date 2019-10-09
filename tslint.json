@@ -8,6 +8,9 @@
     ]
   },
   "rules": {
-    "interface-name" : [true, "never-prefix"]
+    "interface-name" : [true, "never-prefix"],
+    "jsx-no-lambda": false,
+    "no-console": [false, "log", "error"],
+    "forin": true
   }
 }

@@ -1,21 +1,22 @@
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
- 
-import { decrement, increment } from '../actions/actionCreator';
-import Counter from '../components/Counter';
-import { StoreState } from '../types';
- 
- 
-// 将 reducer 中的状态插入到组件的 props 中
-const mapStateToProps = (state: StoreState): { value: number } => ({
-    value: state
-})
- 
-// 将 对应action 插入到组件的 props 中
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-    onDecrement: () => dispatch(decrement()),
-    onIncrement: () => dispatch(increment())
-})
- 
-// 使用 connect 高阶组件对 Counter 进行包裹
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+import { connect } from "react-redux";
+import { createSelector } from "reselect";
+import actionCreator from "../actions/actionCreator";
+import Counter from "../components/Counter";
+import { CounterMainReducer } from "../types";
+
+const reducer: any = (state: any): any => state;
+
+const selector: any = createSelector(
+  [reducer],
+  (counterMainReducer: CounterMainReducer): CounterMainReducer => {
+    const { value } = counterMainReducer;
+    return {
+      value
+    };
+  }
+);
+
+export default connect(
+  selector,
+  actionCreator
+)(Counter);

@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <img src={logo} className="App-logo"/>
-        <Count />
+        <Count/>
       </div>
     );
   }
